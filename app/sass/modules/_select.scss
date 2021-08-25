@@ -1,0 +1,117 @@
+// select
+.jq-selectbox {
+  &:focus {
+    outline: none;
+  }
+}
+
+.jq-selectbox__select {
+  border: none !important;
+  background: none;
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
+
+  &:hover {
+    background: none;
+  }
+}
+
+.jq-selectbox__select-text {
+  font-family: $default-font;
+}
+
+.jq-selectbox__trigger {
+  border-left: none;
+}
+
+.jq-selectbox__dropdown {
+  li {
+    &:hover {
+      background-color: $title-color-second;
+    }
+  }
+}
+
+
+
+// select-first
+.select-first {
+  .jq-selectbox {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .jq-selectbox__select {
+    @include fontSize(17px);
+    border-radius: 0;
+    color: $title-color-second;
+    box-shadow: none !important;
+    height: auto;
+    padding-right: 28px;
+    padding-left: 0;
+
+    &:focus {
+      .jq-selectbox__trigger-arrow {
+        transform: scale(1.2);
+      }
+    }
+
+    &:hover {
+      .jq-selectbox__trigger-arrow {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .jq-selectbox__select-text {
+    width: auto !important;
+    border-bottom: 1px dotted $title-color-second;
+    line-height: 1.3;
+    letter-spacing: 0.3px;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    width: 10px;
+    height: 10px;
+    border: none;
+    background: url("../img/down-arrow.svg") center center no-repeat;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+// select-second
+.select-second {
+  .jq-selectbox__select {
+    background-color: #fff !important;
+    box-shadow: 0 4px 8.55px 0.45px rgba(117, 101, 95, 0.19) !important;
+    @include fontSize(15px);
+    color: $text-color;
+    min-height: 42px;
+    border: 1px solid #d4d4d4 !important;
+  }
+
+  .jq-selectbox__select-text {
+    font-weight: 300;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    border-top: 5px solid #000;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+
+.jq-selectbox li {
+  white-space: pre-wrap;
+}

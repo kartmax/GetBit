@@ -1,0 +1,42 @@
+.widget-popular {
+  padding-left: 11px;
+  padding-right: 11px;
+
+  .tabs__caption {
+    margin-bottom: 28px;
+    padding-top: 8px;
+  }
+
+  .tabs__content {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  a {
+    @extend .clearfix;
+    display: block;
+    color: $text-color;
+  }
+
+  a + a {
+    margin-top: 30px;
+  }
+
+  img {
+    width: 79px;
+    margin-right: 11px;
+  }
+
+  .popular-text {
+    width: calc(100% - 90px);
+    float: right;
+  }
+
+  .count-comment {
+    float: right;
+    width: calc(100% - 90px);
+    font-size: 12px;
+    color: $title-color-second;
+    padding-top: 8px;
+  }
+}

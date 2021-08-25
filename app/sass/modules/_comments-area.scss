@@ -1,0 +1,243 @@
+
+.comments-area {
+  padding-top: 3%;
+  padding-bottom: 4%;
+
+  .comment + .comment {
+    padding-top: 20px;
+  }
+
+  .children {
+    padding-left: 40px;
+
+    @media only screen and (min-width : 650px) {
+      padding-top: 5px;
+      padding-left: 85px;
+    }
+  }
+}
+
+.comment-box {
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.comment-meta {
+  display: inline-block;
+  padding-right: 25px;
+}
+
+.comments-title {
+  @extend .title-block;
+  @include fontSize(29px);
+  white-space: nowrap;
+  color: $title-color-main;
+
+  span:first-child {
+    color: $title-color-second;
+    padding-left: 10px;
+  }
+
+  @media only screen and (min-width : 580px) {
+    white-space: nowrap;
+
+    .title-block__line {
+      margin-left: 25px;
+    }
+  }
+}
+
+.comment-list {
+  padding-top: 3%;
+}
+
+.comment-avatar {
+  width: 30px;
+  margin-right: 10px;
+
+  @media only screen and (min-width : 650px) {
+    width: 60px;
+    margin-right: 25px;
+  }
+}
+
+.comment-author {
+  font-weight: 700;
+  padding-right: 25px;
+}
+
+.comment-time {
+  @include fontSize(13px);
+  color:  #999;
+  font-weight: 300;
+}
+
+.comment-text {
+  color: #333;
+  font-weight: 300;
+  padding-top: 5px;
+}
+
+.comment-reply-link {
+  @extend .link-second;
+  @include fontSize(13px);
+  font-weight: 700;
+  color: $title-color-second;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.comment-reply-title {
+  padding-left: 3px;
+}
+
+
+//----------- comment-respond  ----------------
+.comment-respond {
+  @include fontSize(15px);
+  font-weight: 700;
+  display: flex;
+  flex-flow: wrap;
+  border-radius: 10px;
+  background-color: $main-color;
+  margin-top: 20px;
+  padding: 20px 15px;
+
+  @media only screen and (min-width : 450px) {
+    padding: 22px 25px;
+  }
+
+  input[type = text],
+  input[type = email] {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  label {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .wrap {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+
+    @media only screen and (min-width : 580px) {
+      flex-flow: nowrap;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    @media only screen and (min-width : 750px) {
+      align-items: center;
+    }
+  }
+}
+
+.comment-form {
+  width: 100%;
+}
+
+.comment-form-author {
+  @media only screen and (min-width : 450px) {
+    padding-right: 10px;
+  }
+}
+
+.comment-form-email {
+  @media only screen and (min-width : 450px) {
+    padding-left: 10px;
+  }
+}
+
+.comment-form-author,
+.comment-form-email {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  white-space: nowrap;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+
+  @media only screen and (min-width : 450px) {
+    width: calc(50%);
+  }
+
+  @media only screen and (min-width : 580px) {
+    width: 100%;
+    padding-right: 15px;
+  }
+
+  @media only screen and (min-width : 750px) {
+      flex-flow: row;
+      align-items: center;
+
+    label {
+      padding-left: 0;
+    }
+  }
+
+  @media only screen and (min-width : 1350px) {
+    padding-right: 30px;
+
+    input {
+      max-width: 236px;
+      width: 100%;
+    }
+  }
+
+  input {
+    width: 100%;
+  }
+
+  label {
+    margin-right: 10px;
+    padding-left: 3px;
+  }
+}
+
+.form-submit {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.submit {
+  @extend .btn;
+  font-weight: 700;
+  box-shadow: 0 4px 8.55px 0.45px rgba(117,101,95,.19);
+  border-radius: 4px;
+  cursor: pointer;
+  min-height: 40px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  border: none;
+
+  @media only screen and (min-width : 580px) {
+    margin-top: 5px;
+  }
+
+  @media only screen and (min-width : 1350px) {
+    max-width: 236px;
+    min-width: 236px;
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.form-description {
+  @include fontSize(13px);
+  font-weight: 300;
+  color: #999;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 0;
+}

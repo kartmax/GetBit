@@ -1,0 +1,8 @@
+@import "bourbon";
+
+
+//Lato
+ @include font-face("Lato", "../fonts/Lato/Lato-Regular", 400, $file-formats: ttf);
+ @include font-face("Lato", "../fonts/Lato/Lato-Light", 300, $file-formats: ttf);
+ @include font-face("Lato", "../fonts/Lato/Lato-Bold", 700, $file-formats: ttf);
+ @include font-face("Lato", "../fonts/Lato/Lato-Black", 900, $file-formats: ttf);

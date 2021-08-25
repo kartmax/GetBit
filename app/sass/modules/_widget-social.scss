@@ -1,0 +1,46 @@
+.widget-social {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 25px;
+
+  .widget-header {
+    text-align: center;
+    padding-top: 5px;
+    letter-spacing: -1px;
+  }
+}
+
+.social-list {
+  display: flex;
+  justify-content: start;
+  flex-flow: wrap;
+}
+
+.social-item {
+  padding: 5px 13px;
+}
+
+.solial-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border: 2px solid $title-color-second;
+  border-radius: 50%;
+
+  svg {
+    @extend .animation;
+    fill: $title-color-second;
+    height: 25px;
+  }
+
+  &:hover {
+    svg {
+      transform: scale(0.8);
+    }
+  }
+}

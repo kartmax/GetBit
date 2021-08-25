@@ -1,0 +1,49 @@
+.pagination {
+  padding-top: 5%;
+  padding-bottom: 15px;
+
+  .nav-links {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page-numbers {
+    @extend .hover;
+    @include fontSize(15px);
+    color: $text-color;
+    padding: 10px 15px;
+    font-weight: 700;
+    text-align: center;
+
+    &:hover {
+      background-color: $title-color-second;
+      color: #fff;
+    }
+  }
+
+  .current {
+    background-color: $main-color;
+
+    &:hover {
+      background-color: $main-color;
+      color: $text-color;
+    }
+  }
+
+  .dots {
+    background-color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: $text-color;
+    }
+  }
+
+  .next {
+    &:hover {
+      background-color: #6aa51e;
+    }
+  }
+}

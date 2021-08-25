@@ -1,0 +1,35 @@
+
+//-----------  ul  -------------
+ul.ul {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column;
+
+  li {
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+
+    @media only screen and (min-width : 992px) {
+      margin-left: 33px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-250%, -50%);
+      width: 8px;
+      height: 2px;
+      background-color: $title-color-second;
+      border-radius: 5px;
+
+      @media only screen and (min-width : 768px) {
+        width: 13px;
+        height: 5px;
+        transform: translate(-200%, -50%);
+      }
+    }
+  }
+}

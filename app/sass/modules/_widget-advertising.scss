@@ -1,0 +1,15 @@
+.widget-advertising {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    text-align: center;
+    font-weight: 300;
+  }
+}
+
+.text-info-adv {
+  @include fontSize(16px);
+}

@@ -1,0 +1,150 @@
+.block-top {
+  @include fontSize(17px);
+  color: $title-color-main;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @media only screen and (min-width : 1350px) {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  .title-block {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media only screen and (min-width : 1350px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+}
+
+.top-item__header {
+  max-height: 155px;
+  height: 100%;
+  font-weight: 700;
+  background-color: $main-color;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 25px 15px 10px;
+
+  p {
+    padding-top: 20px;
+  }
+}
+
+.logo-client {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+
+  img {
+    transition: 0.1s;
+  }
+
+  &:hover {
+    img:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.description-client {
+  @extend .hover;
+  display: block;
+  color: $title-color-main;
+  margin-top: 20px;
+}
+
+.top-item__main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  min-height: 92px;
+  padding: 11px;
+
+  .number {
+    @include fontSize(25px);
+    font-weight: 900;
+    color: $title-color-second;
+  }
+
+  p {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.top-item__foot {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: $main-color;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 15px 15px 20px;
+
+  a {
+    @extend .hover;
+    position: relative;
+    color: $title-color-main;
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+
+    &:before {
+      @extend .animation;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 1px;
+      background: $title-color-second;
+      opacity: 0;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+// grid top item
+.top__grid {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: wrap;
+  align-content: stretch;
+}
+
+.top-item {
+  @extend .animation;
+  min-height: 328px;
+  flex: 1 0 160px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px solid $main-color;
+  border-radius: 10px;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  @media only screen and (min-width : 1350px) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}

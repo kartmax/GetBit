@@ -1,0 +1,42 @@
+.widget-comment {
+
+  li {
+    display: flex;
+    flex-flow: column;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  li:last-child {
+    padding-bottom: 7px;
+  }
+
+  .comment-theme {
+    @include fontSize(16px);
+    @extend .animation;
+    color: $title-color-second;
+    font-weight: 700;
+    padding-bottom: 10px;
+    letter-spacing: 0.9px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .comment-text {
+    color: #333;
+    padding-bottom: 10px;
+  }
+
+  .comment-author {
+    @include fontSize(13px);
+    color: #999;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .comment-date {
+    letter-spacing: 0.5px;
+  }
+}

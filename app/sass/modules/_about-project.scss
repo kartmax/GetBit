@@ -1,0 +1,56 @@
+.about-project {
+  color: $title-color-main;
+  font-weight: 300;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.advantages-icon {
+    min-height: 105px;
+
+    img {
+      @extend .animation;
+    }
+}
+
+.advantages-title {
+  color: $title-color-second;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.advantages-description {
+  padding-top: 5px;
+}
+
+// grid
+.advantages-list {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  padding-bottom: 5%;
+  padding-top: 6%;
+}
+
+.advantages-item {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+
+  @media only screen and (min-width : 450px) {
+    width: 50%;
+  }
+
+  @media only screen and (min-width : 1200px) {
+    width: 25%;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}

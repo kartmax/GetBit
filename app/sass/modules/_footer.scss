@@ -1,0 +1,100 @@
+.site-footer {
+  width: 100%;
+  background-color: $main-color;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 13px;
+  color: $title-color-main;
+
+  p {
+    letter-spacing: -0.25px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  a {
+    letter-spacing: -0.55px;
+  }
+
+  .foot-logo {
+    color: $title-color-second;
+    @include fontSize(35px);
+    font-weight: 900;
+    padding-bottom: 15px;
+  }
+}
+
+.wrap-foot {
+  @extend .wrapper;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  @media only screen and (min-width : 570px) {
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.foot-description {
+  text-align: center;
+
+    @media only screen and (min-width : 570px) {
+        text-align: left;
+    }
+}
+
+.wrap-inner {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (min-width : 570px) {
+    flex-flow: row;
+    align-items: flex-end;
+    max-width: 265px;
+    padding-right: 14px;
+  }
+
+  @media only screen and (min-width : 1000px) {
+    max-width: 462px;
+  }
+}
+
+.foot-menu-list {
+  padding-top: 20px;
+
+  li {
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+
+    @media only screen and (min-width : 570px) {
+      text-align: left;
+    }
+
+    @media only screen and (min-width : 1000px) {
+      display: inline-block;
+    }
+  }
+
+  li + li {
+    padding-top: 15px;
+  }
+
+  a {
+    @extend .hover;
+    color: $title-color-main;
+    text-decoration: underline;
+  }
+}
+
+.logo-second {
+  display: inline-block;
+  margin-top: 20px;
+  width: 48px;
+  height: 48px;
+}

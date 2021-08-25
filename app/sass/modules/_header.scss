@@ -1,0 +1,46 @@
+.site-header {
+  padding-top: 38px;
+}
+
+.site-branding {
+  position: relative;
+  padding-left: 108px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 87px;
+    height: 68px;
+    background: url("../img/logo.svg") center center no-repeat;
+    background-size: 87px 68px;
+  }
+}
+
+.site-title {
+  color: $title-color-second;
+  font-size: 46px;
+  font-weight: 900;
+
+  a {
+    color: $title-color-second;
+  }
+}
+
+.top-header {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  min-height: 90px;
+  padding-bottom: 25px;
+  background: url("../img/bg-header.png") no-repeat;
+  background-position: 95% 0;
+
+  @media only screen and (min-width : 768px) {
+    background-position: 95% center;
+  }
+}
+

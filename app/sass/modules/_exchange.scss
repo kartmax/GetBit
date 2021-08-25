@@ -1,0 +1,245 @@
+.exchange-list--item {
+  position: relative;
+  margin-top: 30px;
+  box-shadow: 0 0 8.55px 0.45px rgba(117, 101, 95, 0.19);
+  border-radius: 10px;
+
+  @media only screen and (min-width : 768px) {
+    margin-top: 4%;
+  }
+
+    .block-metrika {
+      box-shadow: none;
+      margin-top: 0;
+
+      @media only screen and (min-width : 1500px) {
+        padding-bottom: 7px;
+      }
+    }
+
+  .counter-exchange {
+    @include fontSize(18px);
+    position: absolute;
+    left: -8px;
+    top: -15px;
+    font-weight: 700;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @media only screen and (min-width : 768px) {
+      width: 36px;
+      height: 36px;
+      left: -15px;
+    }
+  }
+
+  .counter-exchange.color_1 {
+    background-color:  #ffcc00;
+  }
+
+  .counter-exchange.color_2 {
+    background-color:  #d8d8d8;
+  }
+
+  .counter-exchange.color_3 {
+    background-color:  #dbc25f;
+  }
+
+  .counter-exchange.color_4 {
+    background-color:  #eaeaea;
+  }
+
+  .block-metrika--item {
+    padding-top: 5px;
+    justify-content: flex-start;
+  }
+
+  .block-counter-money {
+    padding-top: 15px;
+    text-align: left;
+
+    @media only screen and (min-width : 1240px) {
+      justify-content: center;
+    }
+  }
+
+  .metrika-rating {
+    justify-content: flex-start;
+    width: 100%;
+
+    @media only screen and (min-width : 530px) {
+      width: 50%;
+    }
+
+    @media only screen and (min-width : 1240px) {
+      max-width: 190px;
+      width: 100%;
+    }
+
+    .wrap-content {
+      max-width: 180px;
+    }
+
+    a {
+      margin-top: 10px;
+    }
+  }
+
+  .block-yes-no {
+    .wrap-content {
+      max-width: 180px;
+      width: 100%;
+    }
+
+    .btn-main {
+      @include fontSize(14px);
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .count-vote {
+    padding-top: 0;
+  }
+}
+
+
+//-------------  header-exchange-item -------
+.header-exchange-item {
+  border-radius: 10px;
+}
+
+.metrika-header {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  padding: 5px 5px 0 5px;
+
+  @media only screen and (min-width : 530px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @media only screen and (min-width : 1240px) {
+    justify-content: space-between;
+    flex-flow: nowrap;
+  }
+
+  @media only screen and (min-width : 1350px) {
+    padding-left: 20px;
+  }
+
+  &--item {
+    padding: 10px;
+  }
+}
+
+.logo-exchange {
+
+
+  @media only screen and (min-width : 1240px) {
+    padding-right: 30px;
+  }
+
+  a {
+    display: flex;
+    width: 100px;
+  }
+}
+
+.title-exchange {
+  padding-right: 20px;
+
+  @media only screen and (min-width : 1240px) {
+    width: 100%;
+  }
+
+  a {
+    @include fontSize(22px);
+    color: $text-color;
+    @extend .hover;
+  }
+}
+
+
+//---------------  footer-exchange-item  --------------
+.footer-exchange-item {
+  @extend .padding-metrika-item;
+  @include fontSize(14px);
+  min-height: 270px;
+  background: linear-gradient(to bottom, #f5f5f5, #fff);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  letter-spacing: 0.08px;
+
+  @media only screen and (min-width : 480px) {
+    min-height: 226px;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  .tabs__caption {
+    padding-top: 0;
+    margin-bottom: 2%;
+
+    @media only screen and (min-width : 768px) {
+      margin-left: -14px;
+    }
+
+    li {
+      margin-left: 10px;
+      margin-right: 10px;
+      letter-spacing: 0.1px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      @media only screen and (min-width : 768px) {
+        margin-left: 24px;
+        margin-right: 24px;
+      }
+
+      &:before {
+        bottom: -4px;
+      }
+    }
+  }
+
+  .tabs__content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .ul {
+    padding-top: 3px;
+
+    li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 15px;
+      margin-left: 0;
+
+      @media only screen and (min-width : 768px) {
+        padding-left: 30px;
+      }
+
+      &:before {
+        left: 0;
+        transform: translate(0, -50%);
+
+        @media only screen and (min-width : 992px) {
+        }
+      }
+    }
+  }
+
+  b {
+    font-weight: 700;
+  }
+}

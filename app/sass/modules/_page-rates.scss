@@ -1,0 +1,79 @@
+.page-rates {
+  .content-area {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.rates-tabs {
+  .tabs__content {
+    overflow-x: auto;
+  }
+
+  .tabs__caption {
+    padding-top: 44px;
+
+    li {
+      @include fontSize(14px);
+      margin-left: 0;
+      margin-right: 32px;
+    }
+
+    .active {
+      &:before {
+        bottom: -5px;
+      }
+    }
+  }
+}
+
+table {
+  @include fontSize(14px);
+  min-width: 1000px;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  color: #555;
+  margin-top: 1%;
+  margin-bottom: 2%;
+
+  .green-value {
+    color:  #519600;
+  }
+
+  .red-value {
+    color: #cc0000;
+  }
+
+  .title-row {
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    span {
+      padding-left: 25px;
+    }
+  }
+}
+
+th {
+  background-color: $main-color;
+  font-weight: 700;
+  color: $text-color;
+}
+
+td, th {
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  vertical-align: middle;
+  color: #000 !important;
+}
+
+.tx-cr {
+  text-align: center;
+}

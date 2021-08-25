@@ -1,0 +1,257 @@
+//======= PAGE MARKET ======
+
+//------------- .block-bitmex ----------------
+.block-bitmex {
+  padding-bottom: 10px;
+
+  .title-block {
+    flex-flow: wrap;
+    margin-top: 0;
+
+    p {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    @media only screen and (min-width : 880px) {
+      flex-flow: nowrap;
+    }
+
+    @media only screen and (min-width : 992px) {
+      flex-flow: wrap;
+    }
+
+    @media only screen and (min-width : 1200px) {
+      flex-flow: nowrap;
+    }
+  }
+}
+
+.logo-bitmex {
+  max-width: 220px;
+  width: 100%;
+  max-height: 56px;
+}
+
+//--------  .block-metrika  -----------
+.block-metrika {
+  @extend .padding-metrika-item;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  margin-top: 27px;
+  box-shadow: 0 0 8.55px 0.45px rgba(117, 101, 95, 0.19);
+  border-radius: 10px;
+
+  &--item {
+    display: flex;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media only screen and (min-width : 530px) {
+      width: 50%;
+    }
+
+    @media only screen and (min-width : 1240px) {
+      width: 25%;
+    }
+  }
+
+  .wrap-content {
+    display: inline-block;
+  }
+}
+
+//----------  block-yes-no  -----------
+.block-yes-no {
+  padding-top: 10px;
+
+  .precent {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .precent-yes {
+    span {
+      color:  #6aa51e;
+    }
+  }
+
+  .precent-no {
+    padding-right: 4px;
+
+    span {
+      color: $title-color-second;
+    }
+  }
+
+  .precent-yes,
+  .precent-no {
+    @include fontSize(15px);
+    padding-bottom: 4px;
+
+    span  {
+      font-weight: 700;
+    }
+  }
+
+  .progres {
+    display: flex;
+    justify-content: space-between;
+    max-width: 180px;
+    width: 100%;
+    height: 2px;
+    margin-bottom: 5px;
+  }
+
+  .progres-yes,
+  .progres-no {
+    display: block;
+    height: 100%;
+  }
+
+  .progres-yes {
+    background-color:  #6aa51e;
+    margin-right: 1px;
+  }
+
+  .progres-no {
+    background-color:  #c50000;
+  }
+
+  .wrap-btn-yes-no {
+    @include fontSize(14px);
+    display: flex;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  .btn-yes,
+  .btn-no {
+    border-radius: 4px;
+    width: 84px;
+    min-height: 27px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .btn-yes {
+    background-color:  #6aa51e;
+    margin-right: 12px;
+  }
+
+  .btn-no {
+    background-color:  #c50000;
+  }
+
+  .count-vote {
+    @include fontSize(13px);
+    color: #999;
+    padding-top: 14px;
+
+    @media only screen and (min-width : 1240px) {
+      text-align: center;
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+//--------------  block-counter-money  -----------------
+.block-counter-money {
+  padding-top: 20px;
+  justify-content: flex-start;
+
+  @media only screen and (min-width : 1240px) {
+    justify-content: flex-end;
+    text-align: center;
+  }
+
+  .summa {
+    color:  $text-color !important;
+    font-weight: 700;
+  }
+
+  p {
+    @include fontSize(12px);
+    color:  #999;
+    padding-top: 6px;
+  }
+}
+
+//-------------------  second-metrika  -------------------
+.second-metrika {
+  @include fontSize(13px);
+  padding-top: 12px;
+  justify-content: flex-start;
+
+  @media only screen and (min-width : 1240px) {
+    justify-content: flex-end;
+  }
+
+  p {
+    color: #999;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  span {
+    color: $text-color;
+  }
+}
+
+//-------------  metrika-rating  --------------
+.metrika-rating {
+  padding-top: 10px;
+  justify-content: flex-start;
+
+  @media only screen and (min-width : 1240px) {
+    justify-content: flex-end;
+  }
+
+  p {
+    @include fontSize(14px);
+    padding-bottom: 7px;
+
+    @media only screen and (min-width : 1240px) {
+      padding-top: 0;
+    }
+  }
+
+  .value-rating {
+    @include fontSize(16px);
+    font-weight: 700;
+    float: right;
+    margin-top: -10px;
+  }
+
+  a {
+    @extend .link-second;
+    @include fontSize(13px);
+    display: block;
+    margin-top: 10px;
+
+    @media only screen and (min-width : 1240px) {
+      margin-top: 27px;
+      padding-left: 3px;
+    }
+  }
+
+  .rating-whithout-interactive {
+    width: 120px;
+    height: 20px;
+    background-size: 24px 40px;
+    margin-right: 48px;
+    background-image: url("../img/rating-star-sprite-big.png");
+
+    .current {
+      height: 20px;
+      background-size: 24px 40px;
+      background-image: url("../img/rating-star-sprite-big.png");
+    }
+  }
+}

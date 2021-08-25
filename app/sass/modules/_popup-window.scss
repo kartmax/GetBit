@@ -1,0 +1,109 @@
+.popup-window {
+  position: relative;
+  max-width: 713px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  padding: 20px 15px;
+  font-weight: 300;
+
+  @media only screen and (min-width : 580px) {
+    padding: 20px 53px 30px;
+  }
+
+  .title-popup {
+    @include fontSize(22px);
+    font-weight: 700;
+    padding-bottom: 5%;
+  }
+
+  label {
+    padding-right: 20px;
+  }
+
+  input,
+  textarea,
+  select {
+    border: 1px solid #d4d4d4;
+  }
+
+  .form-item {
+    display: flex;
+    flex-flow: column;
+
+    @media only screen and (min-width : 710px) {
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    label {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    &--info {
+      flex-flow: column;
+      align-items: flex-start;
+
+      label {
+        line-height: 1.5;
+      }
+    }
+  }
+
+  input,
+  .jq-selectbox__select {
+    width: 100%;
+
+    @media only screen and (min-width : 710px) {
+      max-width: 426px;
+    }
+  }
+
+  .jq-selectbox__select {
+    @media only screen and (min-width : 710px) {
+      min-width: 426px;
+    }
+  }
+
+  .submit {
+    max-width: 245px;
+    box-shadow: none;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .mfp-close {
+    right: 15px;
+    top: 12px;
+    font-size: 0;
+    background: url("../img/cancel.svg") center center no-repeat;
+    background-size: 20px;
+
+    @media only screen and (min-width : 580px) {
+      right: 23px;
+    }
+  }
+}
+
+.mfp-content {
+  padding: 5px;
+
+  @media only screen and (min-width : 580px) {
+    padding: 15px;
+  }
+}
+
+.mfp-bg {
+  background: #7f7f7f;
+}

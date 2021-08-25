@@ -1,0 +1,77 @@
+@import "bourbon";
+@import "vars";
+
+html {
+	font-size: 14px;
+
+	// wheare work MagnificPopup
+	margin-right: 0 !important;
+
+	@media only screen and (min-width : 768px){
+		font-size: 16px;
+	}
+}
+
+body {
+	@include fontSize(17px);
+	position: relative;
+	display: flex;
+	flex-flow: wrap;
+	align-content: space-between;
+	height: 100vh;
+	min-width: $min-width;
+	font-family: $default-font;
+	background: url("../img/bg.jpg") repeat;
+	color: $text-color;
+	line-height: 1.2;
+	overflow-x: hidden;
+
+	// Fix text zoom on Mobile Devices
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+.max-width {
+	max-width: $max-width;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	@media only screen and (min-width : 768px){
+		padding-left: 36px;
+		padding-right: 36px;
+	}
+}
+
+.wrapper {
+	@extend .max-width;
+}
+
+.hover {
+	@extend .animation;
+
+	&:hover {
+		color: $title-color-second
+	}
+}
+
+.clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+address, blockquote, center, section, main, header, footer, div, fieldset, form, input, textarea,
+h1, h2, h3, h4, h5, h6, hr, menu, ol, ul, li, p, span, a, pre, table {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+

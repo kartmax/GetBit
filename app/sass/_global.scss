@@ -1,0 +1,146 @@
+.content-area {
+  width: 100%;
+
+  @media only screen and (min-width : 992px) {
+    width: calc(100% - 320px);
+    margin-right: 20px;
+  }
+
+  @media only screen and (min-width : 1500px) {
+    width: calc(100% - 340px);
+  }
+}
+
+.site-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site {
+  min-height: 100%;
+  background-color: #fff;
+  @extend .wrapper;
+}
+
+.site-main:last-child {
+  padding-bottom: 4%;
+}
+
+// title - block
+.title-block {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 5px;
+
+  @media only screen and (min-width : 580px) {
+    flex-flow: row;
+    align-items: center;
+  }
+
+  p {
+    @include fontSize(29px);
+    color: $title-color-main;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @media only screen and (min-width : 580px) {
+      white-space: nowrap;
+      margin-right: 25px;
+    }
+
+    span {
+      color: $title-color-second;
+      font-weight: 700;
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background: #0f0b00;
+    margin-top: 3px;
+
+    @media only screen and (min-width : 580px) {
+      margin-top: 0;
+    }
+  }
+}
+
+// p
+p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+// link-back-page
+.link-back-page {
+  transition: 0.1s;
+  display: block;
+  position: relative;
+  color:  $title-color-second;
+  font-size: 13px;
+  margin-top: 20px;
+
+  .icon {
+    position: absolute;
+    left: -13px;
+    top: 50%;
+    transform: translate(0, -50%);
+    fill: $title-color-second;
+    width: 10px;
+    height: 11px;
+    transition: 0.1s;
+
+    @media only screen and (min-width : 992px) {
+      left: -18px;
+    }
+  }
+
+  &:hover {
+    color: rgba(254, 77, 61, 0.8);
+
+    .icon {
+      left: -10px;
+      transform: translate(0, -50%) scale(1.3);
+
+      @media only screen and (min-width : 992px) {
+        left: -15px;
+      }
+    }
+  }
+}
+
+// link-second
+.link-second {
+  @extend .animation;
+  color: $title-color-second;
+  text-decoration: underline;
+
+  &:hover {
+    color: #999;
+  }
+}
+
+// padding for .exchange-list--item footer and metrika
+.padding-metrika-item {
+  padding: 10px 5px 20px 5px;
+
+  @media only screen and (min-width : 530px) {
+    padding: 10px 15px 20px 15px;
+  }
+
+  @media only screen and (min-width : 1350px) {
+    padding: 10px 14px 20px 28px;
+  }
+}
+
+// hidden
+.hidden {
+  display: none;
+}
+
+
+
+
